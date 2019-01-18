@@ -1,0 +1,5 @@
+# LuigiPinball
+# This project is a game that combines Luigi's Mansion and Pinball
+
+## Progress
+* Several parts, such as the ball, bumpers, and flippers were created. Player controller with input binded is added too.
