@@ -3,3 +3,4 @@
 
 ## Progress
 * Several parts, such as the ball, bumpers, and flippers were created. Player controller with input binded is added too.
+* Added plunger and modified map

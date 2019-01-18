@@ -29,4 +29,6 @@ private:
 
 	void ArrangeAllFlippers();
 
+	void SetupPlungerInput();
+
 };
