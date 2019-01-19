@@ -7,6 +7,8 @@
 #include "PinballBall.generated.h"
 
 class APinballBumper;
+class APinballKillZone;
+class APinballBooster;
 
 UCLASS()
 class PINBALL_API APinballBall : public AActor
@@ -35,8 +37,13 @@ public:
 	UPROPERTY(EditAnywhere)
 		float TableStickiness = 5000;
 
-	TArray<APinballBumper*> ArrayOfBumpers;
+	UPROPERTY(EditAnywhere)
+		APinballKillZone* KillZone;
 
+	UPROPERTY(EditAnywhere)
+		APinballBooster* Booster;
+
+	TArray<APinballBumper*> ArrayOfBumpers;
 	FVector ImpulseToGround;
 
 	
@@ -49,4 +56,8 @@ private:
 	bool IsHittingBumper();
 
 	void GetAllBumpers(TArray<APinballBumper*> &ArrayOfBumpers);
+
+	bool OnKillZone();
+
+	bool OnBooster();
 };

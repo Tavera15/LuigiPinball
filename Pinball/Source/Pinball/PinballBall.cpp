@@ -4,6 +4,8 @@
 #include "Runtime/Engine/Classes/Components/PrimitiveComponent.h"
 #include "Engine/World.h"
 #include "PinballBumper.h"
+#include "PinballKillZone.h"
+#include "PinballBooster.h"
 #include "EngineUtils.h"
 
 // Sets default values
@@ -33,9 +35,15 @@ void APinballBall::Tick(float DeltaTime)
 
 	// Only impulse the pinball if it hits a bumper
 	if (IsHittingBumper()) {
-
 		ArrayOfBumpers[BumperNumHit]->BumpBall();
+	}
 
+	if (OnKillZone()) {
+		KillZone->KillBall();
+	}
+
+	if (OnBooster()) {
+		Booster->BoostBall();
 	}
 	
 }
@@ -85,4 +93,18 @@ void APinballBall::GetAllBumpers(TArray<APinballBumper*> &ArrayOfBumpers) {
 	for (TActorIterator<APinballBumper> Bumpers(GetWorld()); Bumpers; ++Bumpers) {
 		ArrayOfBumpers.Add(*Bumpers);
 	}
+}
+
+bool APinballBall::OnKillZone() {
+	if (IsOverlappingActor(KillZone)) {
+		return true;
+	}
+	return false;
+}
+
+bool APinballBall::OnBooster() {
+	if (IsOverlappingActor(Booster)) {
+		return true;
+	}
+	return false;
 }
