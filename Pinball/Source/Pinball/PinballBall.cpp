@@ -34,6 +34,7 @@ void APinballBall::Tick(float DeltaTime)
 	ImpulseBall(DeltaTime);
 
 	// Only impulse the pinball if it hits a bumper
+	// TODO Trigger only once for score
 	if (IsHittingBumper()) {
 		ArrayOfBumpers[BumperNumHit]->BumpBall();
 	}
