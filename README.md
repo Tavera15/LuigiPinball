@@ -6,3 +6,4 @@
 * Added plunger and modified map
 * Modified Map and added a booster
 * Added a points system
+* Points system was fixed, and added a two widgets

@@ -16,7 +16,6 @@ APinballKillZone::APinballKillZone()
 void APinballKillZone::BeginPlay()
 {
 	Super::BeginPlay();
-	//PinBallUP = Cast<UPrimitiveComponent>(Pinball);
 	
 }
 

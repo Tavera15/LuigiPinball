@@ -46,8 +46,6 @@ void APinballBumper::BumpBall() {
 	// and then multiplys result by the impulse force value
 	auto ImpulseToBall = UKismetMathLibrary::GetDirectionUnitVector(FromBumperLocation, ToBallLocation) * (ImpulseForce);
 	ImpulseToBall.Z = 0;
-	// Function is called in blueprint to start the timeline
-	OnHit();
 
 	PinballPrimComp->AddImpulse(ImpulseToBall, NAME_None, true);
 	

@@ -14,6 +14,7 @@ void AMyPinballPlayerController::BeginPlay() {
 
 	ArrangeAllFlippers();
 	SetupPlungerInput();
+
 }
 
 // Loop through the array of AllFlippers and bind action using input component

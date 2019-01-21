@@ -31,7 +31,6 @@ public:
 	UPrimitiveComponent* PinballPrimComp;
 	
 	void BumpBall();
-	void ChangeColor();
 	
 	
 	UPROPERTY(EditAnywhere)
@@ -39,9 +38,6 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		float ImpulseForce = 200;
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "BumperEvent")
-		void OnHit();
 
 	UPROPERTY(BlueprintAssignable, Category = "BumperEvent")
 		FBumperEvent BumperHitEvent;

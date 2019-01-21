@@ -50,6 +50,7 @@ public:
 	
 private:
 	int BumperNumHit;
+	int LastBumperHit;
 	
 	UPrimitiveComponent* BallUPrimitive = nullptr;
 
@@ -60,4 +61,6 @@ private:
 	bool OnKillZone();
 
 	bool OnBooster();
+
+
 };

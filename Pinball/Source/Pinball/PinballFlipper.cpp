@@ -23,6 +23,7 @@ void APinballFlipper::BeginPlay()
 	Super::BeginPlay();
 	GetComponents(MeshComps);
 	MyMesh = MeshComps[0];
+	if (!Pinball) { return; }
 	PinballPrimComp = Cast<UPrimitiveComponent>(Pinball->GetRootComponent());
 }
 
