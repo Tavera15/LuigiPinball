@@ -8,3 +8,4 @@
 * Added a points system
 * Points system was fixed, and added a two widgets
 * Camera now rotates smoothly
+* Added textures and sound
