@@ -9,3 +9,4 @@
 * Points system was fixed, and added a two widgets
 * Camera now rotates smoothly
 * Added textures and sound
+* Added new ball material, and improved camera rotation

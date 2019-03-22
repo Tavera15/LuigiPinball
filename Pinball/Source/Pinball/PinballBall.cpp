@@ -34,15 +34,16 @@ void APinballBall::Tick(float DeltaTime)
 	ImpulseBall(DeltaTime);
 
 	// Only impulse the pinball if it hits a bumper
-	// TODO Trigger only once for score
 	if (IsHittingBumper()) {
 		ArrayOfBumpers[BumperNumHit]->BumpBall();
 	}
 
+	// Only kill the pinball if is on the kill zone
 	if (OnKillZone()) {
 		KillZone->KillBall();
 	}
 
+	// Only boost pinball if is on the booster
 	if (OnBooster()) {
 		Booster->BoostBall();
 	}

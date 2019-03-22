@@ -28,6 +28,9 @@ public:
 	UPROPERTY(EditAnywhere)
 		APinballBall* Pinball;
 
+	UPROPERTY(EditAnywhere)
+		bool DoRemoveStock = false;
+
 	void KillBall();
 	
 	UPrimitiveComponent* PinBallUP = nullptr;

@@ -8,7 +8,7 @@
 APinballKillZone::APinballKillZone()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -28,5 +28,6 @@ void APinballKillZone::Tick(float DeltaTime)
 
 void APinballKillZone::KillBall() {
 	if (!Pinball) { return; }
+	if (DoRemoveStock) { UE_LOG(LogTemp, Warning, TEXT("Removing Stock")); }
 	Pinball->SetActorLocation(FVector(-1400, 610, -50));
 }

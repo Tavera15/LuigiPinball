@@ -9,7 +9,7 @@
 APinballBooster::APinballBooster()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -31,6 +31,5 @@ void APinballBooster::Tick(float DeltaTime)
 void APinballBooster::BoostBall() {
 	
 	if (!PinballUP) { return; }
-	UE_LOG(LogTemp, Warning, TEXT("Pinball Found"));
 	PinballUP->AddImpulse(FVector(25, 0, 0) * 50, NAME_None, true);
 }
